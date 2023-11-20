@@ -1,0 +1,51 @@
+body{
+
+}
+
+.logo{
+    background-image:url("https://manhinhmaytinhcu.xyz/wp-content/uploads/2018/05/asus-rg-hd-1400x788.jpg");
+}
+
+.logo img{
+    width: 250px;
+    height: 200px;
+    border-bottom-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+.logo table{
+
+    align-items: center;
+    color: gold;
+}
+
+.danhmuc img{
+    width: 150px;
+    height: 200px;
+}
+
+.danhmuc table{
+    width: 100%;
+    border: gold;
+    box-shadow: 5px 1px 5px 1px yellow;
+}
+
+.danhmuc button{
+    font-family: "Berlin Sans FB";
+    width: 200px;
+    height: 50px;
+    border-top-right-radius: 50px;
+}
+
+.danhmuc th{
+    font-family: "Berlin Sans FB";
+}
+
+.danhmuc td{
+    color: yellow;
+    font-family: "Berlin Sans FB";
+    background-image: url("https://tophinhanhdep.com/wp-content/uploads/2021/10/Marvel-HD-Wallpapers-1024x576.png");
+    margin: 5px 10px 5px 10px;
+}

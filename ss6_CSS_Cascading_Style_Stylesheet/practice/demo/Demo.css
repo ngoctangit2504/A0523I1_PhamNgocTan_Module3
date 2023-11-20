@@ -1,0 +1,19 @@
+/* this is a comment */
+h1{
+    color: blue;
+}
+
+p {
+    font-weight:bold;
+}
+
+.class1{
+    color: chartreuse;
+}
+#song{
+    color: coral;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: xx-large;
+}
+
