@@ -1,5 +1,5 @@
-CREATE DATABASE demo_ss2;
-USE demo_ss2;
+CREATE DATABASE demo_database;
+USE demo_database;
 
 create table class(
   id int primary key auto_increment, 
