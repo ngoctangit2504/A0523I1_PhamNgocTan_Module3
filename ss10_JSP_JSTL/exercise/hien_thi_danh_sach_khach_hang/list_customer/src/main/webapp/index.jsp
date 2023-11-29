@@ -3,33 +3,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP List Customer</title>
+    <title>JSP - List Customer</title>
 </head>
 <body>
-<h1>Danh sach khach hang</h1>
-<table border="1px">
+<h1>Danh sách sinh viên</h1>
+<table border="1">
     <thead>
     <tr>
-        <th>Ten</th>
-        <th>Ngay sinh</th>
-        <th>Dia chi</th>
-        <th>Anh</th>
+        <th colspan="4">Danh sách khách hàng</th>
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${list}" var="c" varStatus="list">
-        <tr>
-                <%--            Ten--%>
-            <td>${loop.count}</td>
-            <td><c:out value="${c.name}"/></td>
-                <%--            Ngay sinh--%>
-
-
-                <%--            Đia chi--%>
-            <td>${s.point}</td>
-
-        </tr>
-    </c:forEach>
+    <tr>
+        <th>Tên</th>
+        <th>Ngày sinh</th>
+        <th>Địa chỉ</th>
+        <th>Ảnh</th>
+    </tr>
+    <tr>
+        <td>Nguyễn Thị ...</td>
+        <td>2000-01-01</td>
+        <td>Hà Nội</td>
+        <td><img src="https://shopbanphim.com/wp-content/uploads/2023/11/gai-xinh-che-mat-bang-iphone.jpg" width="100" height="150"></td>
+    </tr>
     </tbody>
 </table>
 </body>

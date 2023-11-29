@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dae085d6-f97c-4108-8a45-d8fb7aeb2f43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../practice/ung_dung_tu_dien_don_gian_servlet/tu_dien/src/main/webapp/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/src/main/java/com/example/list_customer/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang/list_customer/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/practice/demo_ss10/.gradle/7.3.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/practice/demo_ss10/.gradle/7.3.3/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/practice/demo_ss10/.gradle/7.3.3/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss10_JSP_JSTL/practice/demo_ss10/.gradle/7.3.3/checksums/sha1-checksums.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,6 +27,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Yj0jXkOHNvhK97Xvpt1qMYQ3P4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -23,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/CodeGym/A0523I1_PhamNgocTan_Module3/ss9_tong_quan_ung_dung_web/exercise/ung_dung_Product_Discount_Calculator"
+    "last_opened_file_path": "D:/CodeGym/A0523I1_PhamNgocTan_Module3/ss10_JSP_JSTL/exercise/hien_thi_danh_sach_khach_hang"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -35,6 +54,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701023816324</updated>
       <workItem from="1701023817420" duration="55000" />
+      <workItem from="1701189119690" duration="42000" />
     </task>
     <servers />
   </component>

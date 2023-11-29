@@ -1,4 +1,4 @@
-package com.example.list_customer;
+package com.example.demo;
 
 import java.io.*;
 import javax.servlet.http.*;
