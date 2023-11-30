@@ -15,7 +15,7 @@ public class CustomerServlet extends HttpServlet {
 
     private ICustomerService customerService = new CustomerService();
 
-    // Hien thi danh sach
+    // Hiển thị danh sách khách hàng
     private void listCustomers(HttpServletRequest request, HttpServletResponse response) {
         List<Customer> customers = this.customerService.findAll();
         request.setAttribute("customers", customers);
@@ -30,7 +30,7 @@ public class CustomerServlet extends HttpServlet {
         }
     }
 
-    // Them khach hang
+    // Show trang thêm khách hàng
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) {
         RequestDispatcher dispatcher = request.getRequestDispatcher("customer/create.jsp");
         try {
@@ -42,21 +42,157 @@ public class CustomerServlet extends HttpServlet {
         }
     }
 
+    // Show trang edit khách hàng
+    private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Customer customer = this.customerService.findById(id);
+        RequestDispatcher dispatcher;
+        if (customer == null) {
+            dispatcher = request.getRequestDispatcher("error-404.jsp");
+        } else {
+            request.setAttribute("customer", customer);
+            dispatcher = request.getRequestDispatcher("customer/edit.jsp");
+        }
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    // Shao trang xóa khách hàng
+    private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Customer customer = this.customerService.findById(id);
+        RequestDispatcher dispatcher;
+        if (customer == null) {
+            dispatcher = request.getRequestDispatcher("error-404.jsp");
+        } else {
+            request.setAttribute("customer", customer);
+            dispatcher = request.getRequestDispatcher("customer/delete.jsp");
+        }
+
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Thêm mới khách hàng
+    private void createCustomer(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        int id = (int) (Math.random() * 10000);
+
+        Customer customer = new Customer(id, name, email, address);
+        this.customerService.save(customer);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("customer/create.jsp");
+        request.setAttribute("message", "New customer war created");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Cập nhật khách hàng
+    private void updateCustomer(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+
+        Customer customer = this.customerService.findById(id);
+        RequestDispatcher dispatcher;
+        if (customer == null) {
+            dispatcher = request.getRequestDispatcher("error-404.jsp");
+        } else {
+            customer.setName(name);
+            customer.setEmail(email);
+            customer.setAddress(address);
+            this.customerService.update(id, customer);
+            request.setAttribute("customer", customer);
+            request.setAttribute("message", "Customer information was updated");
+            dispatcher = request.getRequestDispatcher("customer/edit.jsp");
+        }
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    // Xóa khách hàng
+    private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Customer customer = this.customerService.findById(id);
+        RequestDispatcher dispatcher;
+        if (customer == null) {
+            dispatcher = request.getRequestDispatcher("error-404.jsp");
+        } else {
+            this.customerService.remove(id);
+            try {
+                response.sendRedirect("/customer");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    // Xem chi tiết một khách hàng
+    private void viewCustomer(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Customer customer = this.customerService.findById(id);
+        RequestDispatcher dispatcher;
+        if (customer == null) {
+            dispatcher = request.getRequestDispatcher("error-404.jsp");
+        } else {
+            request.setAttribute("customer", customer);
+            dispatcher = request.getRequestDispatcher("customer/view.jsp");
+        }
+
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        if(action == null){
+        if (action == null) {
             action = "";
         }
-        switch (action){
+        switch (action) {
             case "create":
+                // show create
                 showCreateForm(request, response);
                 break;
             case "edit":
+                // show edit
+                showEditForm(request, response);
                 break;
             case "delete":
+                showDeleteForm(request, response);
                 break;
             case "view":
+                viewCustomer(request, response);
                 break;
             default:
                 listCustomers(request, response);
@@ -70,12 +206,17 @@ public class CustomerServlet extends HttpServlet {
         if (action == null) {
             action = "";
         }
-        switch (action){
+        switch (action) {
             case "create":
+                // create
+                createCustomer(request, response);
                 break;
             case "edit":
+                // edit
+                updateCustomer(request, response);
                 break;
             case "delete":
+                deleteCustomer(request, response);
                 break;
             default:
                 break;
