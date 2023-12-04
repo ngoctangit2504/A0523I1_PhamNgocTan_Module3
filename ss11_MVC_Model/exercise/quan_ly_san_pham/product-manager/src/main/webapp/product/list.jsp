@@ -16,31 +16,42 @@
 </head>
 <body>
 <h1>Customers</h1>
-<p>
-    <a href="/product?action=create">
-        <button type="button" class="btn btn-primary">Create new customer</button>
-    </a>
-</p>
+<hr>
+<div class="container">
 
-<table class="table table-striped">
-    <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Describe</th>
-        <th>Price</th>
-        <th>Edit</th>
-        <th>Delete</th>
-    </tr>
-    <c:forEach items='${requestScope["products"]}' var="product">
+    <table>
         <tr>
-            <td>${product.getId()}</td>
-            <td><a href="/product?action=view&id=${product.getId()}">${product.getName()}</a></td>
-            <td>${product.getDescribe()}</td>
-            <td>${product.getPrice()}</td>
-            <td><a href="/product?action=edit&id=${product.getId()}">edit</a></td>
-            <td><a href="/product?action=delete&id=${product.getId()}">delete</a></td>
+            <td><a href="/product?action=search"><input type="submit" value="Search" class="btn btn-primary"></a></td>
+            <td><input type="text" id="searchName" name="searchName" placeholder="Nhập theo tên để tìm kiếm"></td>
         </tr>
-    </c:forEach>
-</table>
+    </table>
+
+    <p>
+        <a href="/product?action=create">
+            <button type="button" class="btn btn-primary">Create new customer</button>
+        </a>
+    </p>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Describe</th>
+            <th>Price</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <c:forEach items='${requestScope["products"]}' var="product">
+            <tr>
+                <td>${product.getId()}</td>
+                <td><a href="/product?action=view&id=${product.getId()}">${product.getName()}</a></td>
+                <td>${product.getDescribe()}</td>
+                <td>${product.getPrice()}</td>
+                <td><a href="/product?action=edit&id=${product.getId()}">edit</a></td>
+                <td><a href="/product?action=delete&id=${product.getId()}">delete</a></td>
+            </tr>
+        </c:forEach>
+    </table>
+</div>
 </body>
 </html>
